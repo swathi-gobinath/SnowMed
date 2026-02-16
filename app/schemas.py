@@ -65,6 +65,7 @@ class UserBase(BaseModel):
     phone: Optional[str] = None
     gender: Optional[str] = None
     is_active: Optional[bool] = True
+    password: str
 
 class UserCreate(UserBase):
     pass
@@ -96,6 +97,9 @@ class DoctorBase(BaseModel):
     specialty: Optional[str] = None
     custom_vocab: Optional[dict] = None
     is_active: Optional[bool] = True
+    userid: int
+    photo: Optional[str] = None
+
 
 class DoctorCreate(DoctorBase):
     pass
